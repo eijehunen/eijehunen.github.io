@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eijehunen Slang Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Add custom CSS styles here if needed */
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-purple-500 h-screen flex flex-col justify-center items-center">
+    <header class="text-white text-center py-4">
+        <div class="flex justify-between items-center">
+            <h1 class="text-5xl font-extrabold">Eijehunen Slang Generator</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="mt-10">
+        <div class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
+            <form id="slangForm" class="space-y-4">
+                <div class="relative">
+                    <input type="text" id="slangInput" name="slangInput" placeholder="Enter a word or phrase" class="w-full py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    <button type="submit" class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                        Generate
+                    </button>
+                </div>
+            </form>
+            <div class="mt-6" id="generatedSlang">
+                <!-- Generated slang phrases will appear here -->
+            </div>
+        </div>
+    </main>
+    <footer class="text-white mt-10">
+        <p>&copy; 2023 Eijehunen Slang Generator</p>
+    </footer>
+
+    <script>
+        // JavaScript code for slang generation
+        const slangForm = document.getElementById('slangForm');
+        const slangInput = document.getElementById('slangInput');
+        const generatedSlang = document.getElementById('generatedSlang');
+
+        slangForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            generateSlang();
+        });
+
+        function generateSlang() {
+            const slangList = [
+                "Eijehunen",
+                "Slang-tastic",
+                "Phenomenal Phrases",
+                "Slang-O-Rama",
+                "Lingo-licious",
+                "Slang-tacular"
+            ];
+
+            const randomSlang = slangList[Math.floor(Math.random() * slangList.length)];
+            const generatedHTML = `<p class="text-xl font-bold">${randomSlang}</p>`;
+            
+            generatedSlang.innerHTML = generatedHTML;
+        }
+    </script>
+</body>
+</html>
