@@ -211,12 +211,97 @@
                 "Bokachoda",
             ];
 
+            const emoji = [
+                "😀",
+                "😃",
+                "😄",
+                "😁",
+                "😆",
+                "😅",
+                "😂",
+                "🤣",
+                "😊",
+                "😇",
+                "🙃",
+                "😉",
+                "😌",
+                "😍",
+                "🥰",
+                "😘",
+                "😗",
+                "😙",
+                "😚",
+                "😋",
+                "😛",
+                "😜",
+                "😝",
+                "🤑",
+                "🤗",
+                "🤓",
+                "😎",
+                "🤩",
+                "🥳",
+                "😏",
+                "😒",
+                "😞",
+                "😔",
+                "😟",
+                "😕",
+                "🙁",
+                "😣",
+                "😖",
+                "😫",
+                "😩",
+                "🥺",
+                "😢",
+                "😭",
+                "😤",
+                "😠",
+                "😡",
+                "🤬",
+                "🤯",
+                "😳",
+                "😱",
+                "😨",
+                "😰",
+                "😥",
+                "😓",
+                "🤗",
+                "🙄",
+                "😪",
+                "😫",
+                "😴",
+                "😷",
+                "🤒",
+                "🤕",
+                "🤢",
+                "🤮",
+                "🤧",
+                "🥵",
+                "🥶",
+                "🥴",
+                "😵",
+                "🤯",
+                "🤠",
+                "🥳",
+                "🥺",
+                "🤥",
+                "🤫",
+                "🤭",
+                "🧐",
+                "🤓",
+                "😈",
+           
+            ];
+
+
 
             const inputName = slangInput.value.trim();
 
             if (inputName !== "") {
                 const randomSlang = slangList[Math.floor(Math.random() * slangList.length)];
-                const generatedHTML = `<p class="text-xl font-bold">${randomSlang}, ${inputName} </p>`;
+                const randomEmoji = emoji[Math.floor(Math.random() * emoji.length)];
+                const generatedHTML = `<p class="text-xl font-bold">${randomSlang} ${inputName} ${randomEmoji}</p>`;
 
                 generatedSlang.innerHTML = generatedHTML;
             }
