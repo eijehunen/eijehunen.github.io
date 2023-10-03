@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eijehunen Slang Generator</title>
+    <title>Eije Hunen</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Add custom CSS styles here if needed */
+        body {
+            background: linear-gradient(to right, #3182ce, #9333ea);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Set minimum height to fill the viewport */
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(49, 130, 206, 0.9);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        main {
+            flex-grow: 1;
+            /* Allow main content to grow and fill available space */
+        }
     </style>
 </head>
-<body class="bg-gradient-to-r from-blue-500 to-purple-500 h-screen flex flex-col justify-center items-center">
-    <header class="text-white text-center py-4">
-        <div class="flex justify-between items-center">
-            <h1 class="text-5xl font-extrabold">Eijehunen Slang Generator</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+
+<body class="pt-16">
+    <header class="fixed top-0 left-0 right-0 bg-blue-500 p-4 flex justify-between items-center z-50">
+        <h1 class="text-3xl font-bold text-white">Eije Hunen</h1>
+        <nav class="space-x-4">
+            <a href="#" class="text-white">Home</a>
+            <a href="#" class="text-white">About</a>
+            <a href="#" class="text-white">Contact</a>
+        </nav>
     </header>
-    <main class="mt-10">
+    <main class="mt-20">
         <div class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
             <form id="slangForm" class="space-y-4">
                 <div class="relative">
-                    <input type="text" id="slangInput" name="slangInput" placeholder="Enter a word or phrase" class="w-full py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
-                    <button type="submit" class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                    <input type="text" id="slangInput" name="slangInput" placeholder="Enter a word or phrase"
+                        class="w-full py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    <button type="submit"
+                        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                         Generate
                     </button>
                 </div>
@@ -37,12 +61,16 @@
             </div>
         </div>
     </main>
-    <footer class="text-white mt-10">
-        <p>&copy; 2023 Eijehunen Slang Generator</p>
+
+    <footer class="bg-blue-500 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Eije Hunen</p>
+        </div>
     </footer>
 
+
+
     <script>
-        // JavaScript code for slang generation
         const slangForm = document.getElementById('slangForm');
         const slangInput = document.getElementById('slangInput');
         const generatedSlang = document.getElementById('generatedSlang');
@@ -54,19 +82,148 @@
 
         function generateSlang() {
             const slangList = [
-                "Eijehunen",
-                "Slang-tastic",
-                "Phenomenal Phrases",
-                "Slang-O-Rama",
-                "Lingo-licious",
-                "Slang-tacular"
+                "Bakchod",
+                "Bhidu",
+                "Chutzpah",
+                "Jugaad",
+                "Bapu",
+                "Funda",
+                "Dhinchak",
+                "Chindi",
+                "Tadka",
+                "Gyaani",
+                "Chikitsak",
+                "Jhakaas",
+                "Bewakoof",
+                "Chamakta Sitara",
+                "Sanskari",
+                "Tharki",
+                "Panga",
+                "Mauka",
+                "Golmaal",
+                "Aro bhalo",
+                "Shundor",
+                "Boka",
+                "Dhon",
+                "Maach",
+                "Botol",
+                "Adda",
+                "Bhalo achi",
+                "Taka",
+                "Jamai",
+                "Goru",
+                "Ei jinish ta",
+                "Khawa dawa",
+                "Gari",
+                "Sheel",
+                "Paka",
+                "Chokh",
+                "Boshon",
+                "Kopale",
+                "Maagi",
+                "Bangla",
+                "Hawa",
+                "Baaje",
+                "Polapan",
+                "Tash",
+                "Chhobi",
+                "Ghonta",
+                "Jhut",
+                "Poshaak",
+                "Jeb",
+                "Sei kotha",
+                "Ponchom",
+                "Gopon",
+                "Khocha",
+                "Dhat",
+                "Ghure",
+                "Jhalmuri",
+                "Tez",
+                "Sottyo",
+                "Fankaari",
+                "Ghuronto",
+                "Hatla",
+                "Pocha",
+                "Golpo",
+                "Nasta",
+                "Jhol",
+                "Moja",
+                "Iccha",
+                "Pitu",
+                "Bhoot",
+                "Chhara",
+                "Bismillah",
+                "Hallabol",
+                "Achal",
+                "Dhoka",
+                "Chupchap",
+                "Mastan",
+                "Nak",
+                "Hashi",
+                "Dhoka",
+                "Maja",
+                "Sakib",
+                "Bisso",
+                "Bhul",
+                "Matha",
+                "Pitha",
+                "Bakra",
+                "Maal",
+                "Rumal",
+                "Shuru",
+                "Golmaal",
+                "Jhamela",
+                "Kichu",
+                "Sheta",
+                "Ishkool",
+                "Chhobi",
+                "Boka",
+                "Pagla",
+                "Maja",
+                "Sala",
+                "Khub",
+                "Sei",
+                "Taito",
+                "Mach",
+                "Ghati",
+                "Khabar",
+                "Bari",
+                "Birat",
+                "Khirki",
+                "Juta",
+                "Pora",
+                "Saap",
+                "Raat",
+                "Belun",
+                "Macher",
+                "Bari",
+                "Tikat",
+                "Guti",
+                "Ishkool",
+                "Tak",
+                "Aashar",
+                "Bilash",
+                "Khala",
+                "Holud",
+                "Bhoi",
+                "Lom",
+                "Kishor",
+                "Golla",
+                "Kuthai",
+                "Thala",
+                "Jogi",
+                "Bokachoda",
             ];
 
-            const randomSlang = slangList[Math.floor(Math.random() * slangList.length)];
-            const generatedHTML = `<p class="text-xl font-bold">${randomSlang}</p>`;
-            
-            generatedSlang.innerHTML = generatedHTML;
+
+            const inputName = slangInput.value.trim();
+
+            if (inputName !== "") {
+                const randomSlang = slangList[Math.floor(Math.random() * slangList.length)];
+                const generatedHTML = `<p class="text-xl font-bold">${randomSlang}, ${inputName} </p>`;
+
+                generatedSlang.innerHTML = generatedHTML;
+            }
         }
     </script>
 </body>
-</html>
